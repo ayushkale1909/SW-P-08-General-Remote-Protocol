@@ -1,3 +1,4 @@
+import time 
 import socket
 som = bytes([0x10, 0x02])
 command = bytes([0x03])
@@ -34,6 +35,15 @@ def send_message(message, ip, port):
         print(f"Message sent.")
         reply = sock.recv(1024)
         print(f"Received reply: {reply}")
+        reply = sock.recv(1024)
+        print(f"Received reply: {reply}")
+        time.sleep(1)
+        reply = sock.recv(1024)
+        print(f"Received reply: {reply}")
+        time.sleep(1)
+        reply = sock.recv(1024)
+        print(f"Received reply: {reply}")
+        time.sleep(1)
 
     except socket.timeout:
         print(f"Timeout: No reply received from {ip}:{port} within the set timeout period.")
