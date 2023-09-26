@@ -1,4 +1,5 @@
 import socket
+import time 
 som = bytes([0x10, 0x02])
 command = bytes([0x02])
 eom = bytes([0x10, 0x03])
